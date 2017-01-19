@@ -1,17 +1,17 @@
 #include <math.h>
 #include <stdio.h>
-#include <stdlib.h>
+
 int main(void)
 {
     int coinsReturned = 0;
     float change;
-    scanf("%f",&change);
     printf("O hai! How much change is owed? \n");
+    scanf("%f",&change);
     while (change < 0) {
         printf("How much change is owed? \n");
         scanf("%f",&change);
     }
-    int amount =  round(change * 100);
+    int amount =  roundf(change * 100);
     while (amount > 0) 
     {
         if ((amount - 25) >= 0) { amount = amount - 25; coinsReturned++; }
